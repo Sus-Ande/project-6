@@ -1,40 +1,40 @@
 :root {
-  --section-gap: 8rem;
+  --section-gap: 6rem;
   --section-gap-inner: calc( var(--section-gap) *0.75);
   --gap-xl: 4rem;
   --gap-l: 3rem;
   --gap-m: 2rem;
   --gap-s: 1rem;
   --border-radius: 0px;
-  --color-dark: #222;
-  --color-dark-200: #444;
-  --color-dark-300: #666;
-  --color-dark-400: #888;
-  --color-dark-500: #999;
-  --color-dark-600: #b5b5b5;
-  --color-dark-700: #d5d5d5;
-  --color-dark-800: #f1f1f1;
+  --color-dark: hsl(207, 14%, 29%);
+  --color-dark-200: hsl(207, 14%, 39%);
+  --color-dark-300: hsl(207, 14%, 49%);
+  --color-dark-400: hsl(207, 14%, 59%);
+  --color-dark-500: hsl(207, 14%, 69%);
+  --color-dark-600: hsl(207, 14%, 79%);
+  --color-dark-700: hsl(207, 14%, 89%);
+  --color-dark-800: #fcfcfd;
   --color-dark-900: #f8f4f4;
-  --color-accent: #fc00df;
-  --color-accent-200: #fc00df;
-  --color-accent-300: #fc00df;
-  --color-accent-400: #fc00df;
-  --color-accent-500: #fc00df;
-  --color-accent-600: #fc00df;
-  --color-accent-700: #fc00df;
-  --color-accent-800: #fc00df;
-  --color-accent-900: #fc00df;
-  --color-light: #efead8;
-  --color-light-200: #efead8;
-  --color-light-300: #efead8;
-  --color-light-400: #efead8;
-  --color-light-500: #efead8;
-  --color-light-600: #efead8;
-  --color-light-700: #efead8;
-  --color-light-800: #efead8;
-  --color-light-900: #efead8;
-  --font-sans: "Areal", sans-serif;
-  --font-serif: "Georgia", serif;
+  --color-accent: hsl(9, 98%, 55%);
+  --color-accent-200: hsl(9, 98%, 58%);
+  --color-accent-300: hsl(9, 98%, 61%);
+  --color-accent-400: hsl(9, 98%, 64%);
+  --color-accent-500: hsl(9, 98%, 67%);
+  --color-accent-600: hsl(9, 98%, 70%);
+  --color-accent-700: hsl(9, 98%, 75%);
+  --color-accent-800: hsl(9, 98%, 80%);
+  --color-accent-900: #0584FF;
+  --color-light: hsl(0, 0%, 100%);
+  --color-light-200: hsl(0, 0%, 90%);
+  --color-light-300: hsl(0, 0%, 80%);
+  --color-light-400: hsl(0, 0%, 70%);
+  --color-light-500: hsl(0, 0%, 60%);
+  --color-light-600: hsl(0, 0%, 50%);
+  --color-light-700: hsl(0, 0%, 40%);
+  --color-light-800: hsl(0, 0%, 30%);
+  --color-light-900: hsl(0, 0%, 20%);
+  --font-sans: "Industry", sans-serif;
+  --font-serif: "Abolition", serif;
   --line-height: 1.5;
   --font-scale: 1.25;
   --font-size: 1rem;
@@ -67,6 +67,30 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
 }
 
+h1 {
+  font-size: var(--font-size-6);
+}
+
+h2 {
+  font-size: var(--font-size-5);
+}
+
+h3 {
+  font-size: var(--font-size-4);
+}
+
+h4 {
+  font-size: var(--font-size-3);
+}
+
+h5 {
+  font-size: var(--font-size-2);
+}
+
+h6 {
+  font-size: var(--font-size-1);
+}
+
 p {
   line-height: var(--line-height);
 }
@@ -82,22 +106,6 @@ a:hover {
 
 li {
   line-height: var(--line-height);
-}
-
-.test {
-  background-color: blue;
-  color: #fff;
-  padding: 1rem 1rem;
-  border-radius: 2rem;
-  border: 0;
-  font-size: 1rem;
-  font-weight: 700;
-  display: inline-block;
-  text-decoration: none;
-}
-.test:hover {
-  background-color: var(--color-accent);
-  color: var(--color-light);
 }
 
 .hero {

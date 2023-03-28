@@ -1,15 +1,16 @@
 @mixin default(
-    $background: var(--color-dark),  
+    $background: var(--color-accent),  
     $color: var(--color-light), 
-    $hover-background: var(--color-accent), 
+    $hover-background: var(--color-accent-400), 
     $hover-color: var(--color-light)
     ) {
     background-color: $background;
     color: #fff;
-    padding: 1rem 1rem;
-    border-radius: 2rem;
+    padding: 0.5rem 1.5rem;
+    // border-radius: 2rem;
     border: 0;
-    font-size: 1rem;
+    font-size: var(--font-size-2);
+    font-family: var(--font-serif);
     font-weight: 700;
     display: inline-block;
     text-decoration: none;
