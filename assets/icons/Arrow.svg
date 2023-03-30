@@ -1,7 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="19.795" height="29.465" viewBox="0 0 19.795 29.465">
-  <g id="Arrow" transform="translate(-87.439 -728.096)">
-    <path id="Line_5" data-name="Line 5" d="M1.5,27.142h-3V0h3Z" transform="translate(97.337 728.096)" fill="#fff"/>
-    <path id="Line_6" data-name="Line 6" d="M1.061,10.529-1.061,8.407,8.407-1.061l2.121,2.121Z" transform="translate(96.706 747.032)" fill="#fff"/>
-    <path id="Line_7" data-name="Line 7" d="M8.407,10.529-1.061,1.061,1.061-1.061l9.468,9.468Z" transform="translate(88.5 747.032)" fill="#fff"/>
+  <g id="Arrow" transform="translate(-87.44 -728.095)">
+    <path id="Path_28" data-name="Path 28" d="M510.337,383.6l-.429.429-9.468-9.468,2.121-2.121,6.276,6.276V354.56h3v24.152l6.276-6.276,2.121,2.121-9.468,9.468Z" transform="translate(-413 373.535)" fill="#fff"/>
   </g>
 </svg>

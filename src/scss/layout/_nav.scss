@@ -1,5 +1,14 @@
 .menu {
-    width: 455px;
-    height: 45px;
-    background-color: crimson;
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--gap-m);
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        gap: var(--gap-m);
+    }
 }

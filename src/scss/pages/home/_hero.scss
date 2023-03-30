@@ -43,16 +43,16 @@
     }
 
     &__social {
-        min-height: 40px; // temp
-        max-width: 250px; //temp
-        width: 100%; //temp
+        // min-height: 40px; // temp
+        // max-width: 250px; //temp
+        // width: 100%; //temp
         background-color: yellow; //temp
-        // margin-top: 100px;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // list-style: none;
-        // gap: 1.5rem;
+
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: var(--gap-s);
     }
 
 }

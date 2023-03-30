@@ -125,16 +125,22 @@ li {
   align-items: center;
 }
 .site-header__branding {
-  width: 140px;
-  height: 90px;
   background-color: crimson;
   display: block;
 }
 
 .menu {
-  width: 455px;
-  height: 45px;
-  background-color: crimson;
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--gap-m);
+}
+.menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-m);
 }
 
 .hero {
@@ -171,10 +177,12 @@ li {
   background-color: yellow;
 }
 .hero__social {
-  min-height: 40px;
-  max-width: 250px;
-  width: 100%;
   background-color: yellow;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--gap-s);
 }
 
 /*# sourceMappingURL=style.css.map */
