@@ -1,3 +1,58 @@
 .hero {
-    background-color: black;
+    height: 100vh;
+    display: grid;
+
+    &__inner {
+        display: grid;
+        grid-template-rows: 100px 1fr 80px;
+        // padding-top: 100px;
+        grid-template-areas: 
+        'hero-header'
+        'hero-main'
+        'hero-footer';
+        align-items: center;
+    }
+
+    &__main {
+        grid-area: hero-main;
+        padding: var(--gap-m) var(--gap-xl);
+    }
+
+    &__content {
+        max-width: 44rem;
+        width: 100%;
+        background-color: yellow; // temp
+        min-height: 400px;  // temp
+    }
+
+    &__footer {
+        grid-area: hero-footer;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 var(--gap-xl);
+    }
+
+
+
+    &__arrow {
+        display: block;
+        min-height: 40px; // temp
+        max-width: 250px; //temp
+        width: 100%; //temp
+        background-color: yellow; //temp
+    }
+
+    &__social {
+        min-height: 40px; // temp
+        max-width: 250px; //temp
+        width: 100%; //temp
+        background-color: yellow; //temp
+        // margin-top: 100px;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // list-style: none;
+        // gap: 1.5rem;
+    }
+
 }

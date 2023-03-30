@@ -1,0 +1,24 @@
+.site-header {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    display: grid;
+    padding: var(--gap-m) var(--gap-xl);
+    z-index: 999;
+
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__branding {
+        width: 140px; // TEMP
+        height: 90px; // TEMP
+        background-color: crimson;
+        display: block;
+        
+       
+    }
+
+}
