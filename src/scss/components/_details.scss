@@ -1,0 +1,40 @@
+@mixin triangle(
+    $background-color: var(--color-light-300),
+    $position: bottom,
+    $hover-background: var(--color-accent-800)) 
+    {
+        
+    position: relative;
+    overflow: hidden;
+    
+    &:after {
+        content: '';
+        display: block;
+        width: 130px;
+        height: 130px;
+        background-color: $background-color;
+        position: absolute;
+        transform: rotate(45deg);
+        transform-origin: bottom-left;
+        right: -70px;
+        bottom: -70px;
+        transition: background-color 0.3s;
+
+        @if $position == top {
+            top: -70px;
+        }
+       
+        &:hover {
+            &:after {
+                background-color: $hover-background;
+            }
+        }
+
+
+
+
+
+    }
+
+
+}

@@ -5,15 +5,16 @@
     $hover-color: var(--color-light)
     ) {
     background-color: $background;
-    color: #fff;
+    color: $color;
     padding: 0.5rem 1.5rem;
     // border-radius: 2rem;
     border: 0;
     font-size: var(--font-size-2);
     font-family: var(--font-serif);
-    font-weight: 700;
+    font-weight: 400;
     display: inline-block;
     text-decoration: none;
+    transform: skew(-10deg);
     &:hover {
         background-color: $hover-background;
         color: $hover-color;
