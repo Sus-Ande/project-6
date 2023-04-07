@@ -1,5 +1,9 @@
+@use '../../components/buttons' as button;
+
 .hero {
-    height: 100vh;
+    min-height: 100vh;
+    background: url(assets/images/herobackground@2x.jpg);
+    background-size: cover;
     display: grid;
 
     &__inner {
@@ -21,8 +25,14 @@
     &__content {
         max-width: 44rem;
         width: 100%;
-        background-color: yellow; // temp
-        min-height: 400px;  // temp
+    }
+
+    &__title {
+        color: var(--color-light);
+        font-size: clamp(3rem, 0.8571rem + 6.8571vw, 6rem);
+        // font-style: italic;
+        // font-weight: 400;
+
     }
 
     &__footer {
@@ -30,29 +40,57 @@
         display: flex;
         justify-content: space-between;
         padding: 0 var(--gap-xl);
+
+        
+
+
     }
-
-
 
     &__arrow {
         display: block;
-        min-height: 40px; // temp
-        max-width: 250px; //temp
-        width: 100%; //temp
-        background-color: yellow; //temp
-    }
-
-    &__social {
         // min-height: 40px; // temp
         // max-width: 250px; //temp
         // width: 100%; //temp
-        background-color: yellow; //temp
-
-        list-style: none;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: var(--gap-s);
+        color: var(--color-light);
     }
+
+    &__arrow-text {
+        font-family: var(--font-serif);
+        font-weight: 400;
+        font-size: var(--font-size-1);
+        transition: all 0.5s;
+        
+    }
+
+    &__button {
+        margin: 6px;
+        
+        @include button.default;
+        &--blue {
+            background-color: var(--color-accent-800);
+
+            &:hover {
+                background-color: var(--color-accent-900);
+            }
+        }
+    }
+}
+
+.social {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--gap-s);
+
+   
+    .social__link {
+        &:hover {
+            path, rect {
+                fill: var(--color-accent);
+                transition: all 0.5s;
+            }
+        }
+    }    
 
 }

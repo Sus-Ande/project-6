@@ -1,0 +1,67 @@
+@use '../../components/buttons' as button;
+// @use '../../components/details';
+
+.news {
+    
+    &__inner {
+        // width: 100vw;
+        // height: 100vh;
+        margin: 0 4rem;
+        
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: var(--gap-m);
+    }
+
+    &__card-big {
+        grid-row: span 2;
+        grid-column: span 2;
+        width: 100%;
+        padding-right: 4rem;
+
+        .news__title {
+            font-size: clamp(2rem, 0.8571rem + 6.8571vw, 5rem);
+        }
+
+    }
+
+    &__card-small {
+        grid-column: 3;
+        padding: var(--gap-s);
+        
+        .news__title {
+            margin-bottom: var(--gap-s);
+            font-size: var(--font-size-4);
+        }
+        
+    }
+
+    &__button {
+        margin: 6px;
+        
+        @include button.default;
+
+        &--white {
+            background-color: var(--color-light);
+            color: var(--color-dark);
+            // transition: font-size 0.2s;
+            
+            &:hover {
+                background-color: var(--color-light);
+                color: var(--color-dark);
+                // font-size: var(--font-size-2);
+            }
+        }
+
+    }
+
+
+}

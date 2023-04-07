@@ -1,0 +1,63 @@
+@use '../../components/details';
+
+.promo {
+
+    &__inner {
+        background: url(assets/images/promo@2x.jpg);
+        background-size: cover;
+        transition: 0.3s ease-out;
+        // opacity: 0.7;
+        margin: 4rem;
+        padding: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        position: relative;
+
+        @include details.triangle($background-color: var(--color-accent-800));
+
+        // Vart ska denna vara för att backgrunden ska zoomas in?
+        &:hover {
+            transition: transform 0.3s ease-out ;
+        }
+        
+    }
+
+    
+    &__arrow {
+        position: absolute;
+        transform: rotate(270deg);
+        right: 10px;
+        bottom: 5px;
+        z-index: 80;
+        
+    }
+    
+    &__main {
+        
+    }
+    
+    &__title {
+        // position: absolute;
+        color: var(--color-light);
+        font-size: clamp(2rem, 0.8571rem + 6.8571vw, 5rem);
+        margin: 0;
+        
+    }
+    
+    &__subtitle {
+        // position: absolute;
+        color: var(--color-light-200);
+        margin: 0;
+        
+    }
+    
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgb(0,0,0,0.3);
+    }
+}

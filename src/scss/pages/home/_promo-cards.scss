@@ -1,0 +1,139 @@
+@use '../../components/details';
+
+.promo-cards { 
+    width: 100%;
+    display: grid;
+    // gap: var(--section-gap);
+    
+    &__inner {
+        margin: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: var(--gap-m);
+        
+    }
+    
+    &__card { 
+        padding-bottom: 2rem;
+
+    }
+
+    // &__link {
+    //     transition: background-color 0.2s;
+
+    //     &:hover {
+    //         background-color: var(--color-dark);
+    //     }
+    // }
+    
+    &__subtitle {
+        margin: 0;
+        margin-left: 2.5rem;
+        margin-top: 2rem;
+        padding-bottom: 8px;
+        font-weight: 400;
+    }
+    
+    &__heading {
+        margin: 0;
+        margin-left: 2.5rem;
+        font-weight: 400;
+    }
+
+    // &__arrow {
+    //     display: flex;
+    //     justify-content: flex-end;
+    // }
+    
+    &--one {
+        background-color: var(--color-dark);
+        @include details.triangle($background-color: var(--color-accent-800));
+
+        &:hover {
+            background-color: var(--color-darker);
+            transition: all 0.5s;
+        }
+        
+        .promo-cards__subtitle {
+            color: var(--color-light-500);
+        }
+
+        .promo-cards__heading {
+            color: var(--color-light);
+        }
+
+        .promo-cards__small {
+            color: var(--color-light-500);
+            margin: 0;
+            margin-left: 2.5rem;
+            font-size: 9px;
+        }
+
+        .promo-cards__arrow {
+            position: absolute;
+            transform: rotate(270deg);
+            right: 10px;
+            bottom: 5px;
+            z-index: 70;
+            transition: all 0.5s;
+            
+
+        }
+        
+    }
+    
+    &--two {
+        background-color: var(--color-dark-700);
+        @include details.triangle();
+
+        &:hover {
+            background-color: var(--color-dark-600);
+            transition: all 0.5s;
+        }
+        
+        .promo-cards__subtitle {
+            color: var(--color-dark);          
+        }
+
+        .promo-cards__heading {
+            color: var(--color-accent);
+        }
+
+        .promo-cards__arrow {
+            position: absolute;
+            transform: rotate(270deg);
+            right: 10px;
+            bottom: 5px;
+            z-index: 80;
+
+        }
+    }
+
+    &--three {
+        background-color: var(--color-dark-700);
+        @include details.triangle();
+
+        &:hover {
+            background-color: var(--color-dark-600);
+            transition: all 0.5s;
+        }
+
+        .promo-cards__subtitle {
+            color: var(--color-light-500);
+        }
+
+        .promo-cards__heading {
+            color: var(--color-dark);
+        }
+
+        .promo-cards__arrow {
+            position: absolute;
+            transform: rotate(270deg);
+            right: 10px;
+            bottom: 5px;
+            z-index: 90;
+
+        }
+    }
+
+}
