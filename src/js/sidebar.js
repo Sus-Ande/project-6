@@ -1,14 +1,16 @@
-// const sidebar = () => {
+const sidebar = () => {
 
-//     const button = document.querySelector('.menu-button')
-//     const sidebar = document.querySelector('.sidebar')
+    const menuButton = document.querySelector('.menu-button')
+    const sidebar = document.querySelector('.sidebar')
 
-//     const toggleSidebar = () => {
-//         sidebar.classlist.toggle('sidebar--open')
-//     }
+    const toggleSidebar = () => {
+        sidebar.classList.toggle('sidebar--open')
+        menuButton.classList.toggle('menu-button--close')
+        
+    }
 
-//     button.addEventListener('click', toggleSidebar)
+    menuButton.addEventListener('click', toggleSidebar)
 
-// }
+}
 
-// sidebar()
+sidebar()
