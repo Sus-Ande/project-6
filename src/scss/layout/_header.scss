@@ -1,3 +1,5 @@
+@use '../utilities/responsive';
+
 .site-header {
     position: fixed;
     height: 100px;
@@ -6,17 +8,33 @@
     padding: var(--gap-m) var(--gap-xl);
     z-index: 999;
 
+    // Responsive
+    @include responsive.max(800px) {
+       
+        .site-header__branding svg {
+            width: 70px;
+            height: 60px;
+        }
+    }
+    
+    &--hide {
+        
+        transform: translateY(-100%);
+
+    }   
+    
     &--scroll {
         background-color: var(--color-dark);
-        height: 100px;
+        height: 80px;
         opacity: 0.8;
         padding-top: 5px;
 
-        // .site-header__branding {
-        //     width: 50px;
-        //     height: 40px;
-        // }
-    }    
+        .site-header__branding svg {
+            width: 70px;
+            height: 60px;
+        }
+
+    }
 
     &__inner{
         width: 100%;
@@ -41,7 +59,7 @@
     border: 0;
     border-radius: 0;
 
-    &:focus, &--close {
+    &--close {
 
         .menu-button__hamburger {
 
