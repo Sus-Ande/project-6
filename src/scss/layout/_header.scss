@@ -11,7 +11,11 @@
         height: 100px;
         opacity: 0.8;
         padding-top: 5px;
-        
+
+        // .site-header__branding {
+        //     width: 50px;
+        //     height: 40px;
+        // }
     }    
 
     &__inner{
@@ -26,4 +30,71 @@
        
     }
 
+}
+
+.menu-button {
+    height: 26px;
+    width: 26px;
+    position: relative;
+    background: none;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+
+    &:focus, &--close {
+
+        .menu-button__hamburger {
+
+            transition: transform 0.2s 0.2s;
+            transform: rotate(45deg) translate(-50%, -50%);
+            
+            &:before {
+                transition: top 0.2s, transform 0.2s 0.2s;
+                transform: rotate(90deg);
+                top: 0;
+            }
+            
+            &:after {
+                transition: width 0.2s;
+                width: 0;
+            }
+            
+            
+        }
+    }
+
+    &__hamburger {
+
+        transform-origin: left top;
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+
+        transition: transform 0.2s;
+        transform: translate(-50%, -50%) rotate(0);
+        background-color: var(--color-light);
+
+        &:before, &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -8px;
+            height: 1px;
+            width: 100%;
+            background-color: inherit;
+        }
+
+        &:before {
+            transition: top 0.2s 0.2s, transform 0.2s;
+        }
+
+        &:after {
+            top: 8px;
+            transition: width 0.2s 0.2s;
+        }
+        
+
+    }
 }

@@ -7,6 +7,7 @@
     <title>Traningslagret</title>
     <link rel="stylesheet" href="https://use.typekit.net/lmt0rbm.css">
     <link rel="stylesheet" href="style.css">
+    <!-- <script src="src/js/sidebar.js" defer></script> -->
     <script src="src/js/headerScroll.js" defer></script>
 </head>
 <body>
@@ -40,15 +41,34 @@
                     <li class="menu__item"><a href="#opening-hours" class="menu__link">ÖPPETTIDER</a></li>
 
                 </ul>
-                <button class="menu__button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="16" viewBox="0 0 21 16">
-                        <path id="Menu" d="M493,374v-2h21v2Zm0-7v-2h21v2Zm0-7v-2h21v2Z" transform="translate(-493 -358)" fill="#fff"/>
-                    </svg>
+
+                <button class="menu-button">
+                    <div class="menu-button__hamburger"></div>
                 </button> 
+
             </nav>
 
+            
+            
         </div>
     </header>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar__inner">
+            <ul class="sidebar__list">
+                <li class="sidebar__item"><a href="" class="sidebar__link">HEM</a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link">TRÄNING</a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link">OM OSS</a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link">KONTAKT</a></li>
+                <li class="sidebar__item"><a href="#opening-hours" class="sidebar__link">ÖPPETTIDER</a></li>
+            </ul>
+        </div>
+
+        <!-- <button class="menu-button">
+            <div class="menu-button__hamburger"></div>
+        </button>  -->
+    </nav>
 
     <!-- Hero -->
     <section class="hero">      
@@ -68,11 +88,12 @@
                 
             <footer class="hero__footer">
 
-                <a href="" class="hero__arrow hero__arrow-text">
+
+                <a href="" class="hero__arrow">
                     <svg xmlns="http://www.w3.org/2000/svg" width="19.796" height="29.465" viewBox="0 0 19.796 29.465">
                         <path id="arrow" d="M147.214,85.845l-.43.43-9.468-9.468,2.121-2.121,6.277,6.277V56.81h3V80.962l6.277-6.277,2.121,2.121-9.468,9.468Z" transform="translate(-137.317 -56.81)" fill="#fff"/>
                     </svg>
-                     LÄS MER
+                    <h6 class="hero__arrow-text">Läs mer</h6>
                 </a>
 
                 <nav class="hero__social">
@@ -155,7 +176,7 @@
             <div class="news__cards">
 
                 <!-- Article 1 -->
-                <article class="news__card news__card-big">
+                <article class="news__card-1 news__card-big">
                     <p class="news__date">23 Mars 2023</p>
                     <h1 class="news__title">Träningslagret Karlskoga</h1>
                     <img src="assets/images/Mask Group 1@2x.jpg" alt="" class="news__card-image">
@@ -165,7 +186,7 @@
                 </article>
 
                 <!-- Article 2 -->
-                <article class="news__card news__card-small">
+                <article class="news__car-2 news__card-small">
                     <p class="news__date">23 Mars 2023</p>
                     <h3 class="news__title">Vi springer in pengar till Barncancerfonden</h3>
                     <img src="assets/images/Mask Group 3@2x.jpg" alt="" class="news__card-image">
@@ -175,7 +196,7 @@
                 </article>
 
                 <!-- Article 3 -->
-                <article class="news__card news__card-small">
+                <article class="news__card-3 news__card-small">
                     <p class="news__date">23 Mars 2023</p>
                     <h3 class="news__title">Vårens nyheter!</h3>
                     <img src="assets/images/Mask Group 2@2x.jpg" alt="" class="news__card-image">
@@ -192,7 +213,6 @@
         <div class="promo__inner">
 
             <div class="promo__main">
-                <!-- <img src="assets/images/promo@2x.jpg" alt="" class="promo__image"> -->
                 <h1 class="promo__title">Behöver du hjälp att komma igång?</h1>
                 <h3 class="promo__subtitle">Vi erbjuder både personlig tränare och kostrådgivning!</h3>
                 
@@ -201,9 +221,7 @@
                         <path id="arrow" d="M147.214,85.845l-.43.43-9.468-9.468,2.121-2.121,6.277,6.277V56.81h3V80.962l6.277-6.277,2.121,2.121-9.468,9.468Z" transform="translate(-137.317 -56.81)" fill="#fff"/>
                     </svg>
                 </a> 
-            </div> 
-            <div class="promo__overlay"></div>
-            
+            </div>          
             
         </div>
         
@@ -231,13 +249,13 @@
                 <div class="opening-hours__card opening-hours__card-reception">
                     <h3 class="opening-hours__card-title opening-hours__card-title-reception">Reception</h3>
                     <ul class="opening-hours__list opening-hours__list-reception">
-                        <li class="opening-hours__list-item"><span>Måndag</span>09:30-20:00</li>
-                        <li class="opening-hours__list-item"><span>Tisdag</span>09:30-20:00</li>
-                        <li class="opening-hours__list-item"><span>Onsdag</span>09:30-20:00</li>
-                        <li class="opening-hours__list-item"><span>Torsdag</span>09:30-20:00</li>
-                        <li class="opening-hours__list-item opening-hours__list-item--current"><span>Fredag</span>09:30-19:00</li>
-                        <li class="opening-hours__list-item"><span>Lördag</span>09:00-13:00</li>
-                        <li class="opening-hours__list-item"><span>Söndag</span>16:00-20:00</li>
+                        <li class="opening-hours__item"><span>Måndag</span>09:30-20:00</li>
+                        <li class="opening-hours__item"><span>Tisdag</span>09:30-20:00</li>
+                        <li class="opening-hours__item"><span>Onsdag</span>09:30-20:00</li>
+                        <li class="opening-hours__item"><span>Torsdag</span>09:30-20:00</li>
+                        <li class="opening-hours__item opening-hours__item--current"><span>Fredag</span>09:30-19:00</li>
+                        <li class="opening-hours__item"><span>Lördag</span>09:00-13:00</li>
+                        <li class="opening-hours__item"><span>Söndag</span>16:00-20:00</li>
                     </ul>
                     <p>Tiderna kan komma att förändras iochmed högtider/röda dagar.</p>
                 </div>
@@ -245,28 +263,28 @@
                 <!-- Bastu -->
                 <div class="opening-hours__card opening-hours__card-bastu">
                     <h3 class="opening-hours__card-title">Bastu</h3>
-                    <ul class="opening-hours__list opening-hours__list-bastu">
-                        <li class="opening-hours__list-item"><span>Måndag</span>09:30-20:00</li>
-                        <li class="opening-hours__list-item"><span>Tisdag</span>09:30-20:00</li>
-                        <li class="opening-hours__list-item"><span>Onsdag</span>09:30-20:00</li>
-                        <li class="opening-hours__list-item"><span>Torsdag</span>09:30-20:00</li>
-                        <li class="opening-hours__list-item opening-hours__list-item--current"><span>Fredag</span>09:30-19:00</li>
-                        <li class="opening-hours__list-item"><span>Lördag</span>09:00-13:00</li>
-                        <li class="opening-hours__list-item"><span>Söndag</span>16:00-20:00</li>
+                    <ul class="opening-hours__opening-hours__bastu">
+                        <li class="opening-hours__item"><span>Måndag</span>09:30-20:00</li>
+                        <li class="opening-hours__item"><span>Tisdag</span>09:30-20:00</li>
+                        <li class="opening-hours__item"><span>Onsdag</span>09:30-20:00</li>
+                        <li class="opening-hours__item"><span>Torsdag</span>09:30-20:00</li>
+                        <li class="opening-hours__item opening-hours__item--current"><span>Fredag</span>09:30-19:00</li>
+                        <li class="opening-hours__item"><span>Lördag</span>09:00-13:00</li>
+                        <li class="opening-hours__item"><span>Söndag</span>16:00-20:00</li>
                     </ul>
                 </div>
 
                 <!-- Keycard -->
                 <div class="opening-hours__card opening-hours__card-keycard">
                     <h3 class="opening-hours__card-title">Keycard</h3>
-                    <ul class="opening-hours__list opening-hours__list-keycard">
-                        <li class="opening-hours__list-item"><span>Måndag</span>09:30-20:00</li>
-                        <li class="opening-hours__list-item"><span>Tisdag</span>09:30-20:00</li>
-                        <li class="opening-hours__list-item"><span>Onsdag</span>09:30-20:00</li>
-                        <li class="opening-hours__list-item"><span>Torsdag</span>09:30-20:00</li>
-                        <li class="opening-hours__list-item opening-hours__list-item--current"><span>Fredag</span>09:30-19:00</li>
-                        <li class="opening-hours__list-item"><span>Lördag</span>09:00-13:00</li>
-                        <li class="opening-hours__list-item"><span>Söndag</span>16:00-20:00</li>
+                    <ul class="opening-hours__opening-hours__keycard">
+                        <li class="opening-hours__item"><span>Måndag</span>09:30-20:00</li>
+                        <li class="opening-hours__item"><span>Tisdag</span>09:30-20:00</li>
+                        <li class="opening-hours__item"><span>Onsdag</span>09:30-20:00</li>
+                        <li class="opening-hours__item"><span>Torsdag</span>09:30-20:00</li>
+                        <li class="opening-hours__item opening-hours__item--current"><span>Fredag</span>09:30-19:00</li>
+                        <li class="opening-hours__item"><span>Lördag</span>09:00-13:00</li>
+                        <li class="opening-hours__item"><span>Söndag</span>16:00-20:00</li>
                     </ul>
                 </div>
 
@@ -283,8 +301,9 @@
     <!-- Footer -->
     <section class="site-footer">
         <div class="site-footer__inner">
+            
             <div class="site-footer__contact">
-
+                
                 <!-- Logo -->
                 <a href="index.html" class="site-footer__branding">
                     <svg xmlns="http://www.w3.org/2000/svg" width="136.827" height="89.051" viewBox="0 0 136.827 89.051">
@@ -319,7 +338,7 @@
             <!-- Icons & Social -->
             <div class="site-footer__icons">
 
-                <a class="site-footer__image">
+                <a href=""class="site-footer__image">
                     <img src="assets/images/Image 19.svg" alt="">
                 </a>
 

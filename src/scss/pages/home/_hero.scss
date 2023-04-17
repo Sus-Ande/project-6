@@ -1,15 +1,17 @@
 @use '../../components/buttons' as button;
+@use '../../utilities/responsive';
 
 .hero {
-    min-height: 100vh;
+    // min-height: 100vh;
     background: url(assets/images/herobackground@2x.jpg);
+    // aspect-ratio: 1 / 1;
     background-size: cover;
+    background-position: center center;
     display: grid;
 
     &__inner {
         display: grid;
         grid-template-rows: 100px 1fr 80px;
-        // padding-top: 100px;
         grid-template-areas: 
         'hero-header'
         'hero-main'
@@ -40,25 +42,22 @@
         display: flex;
         justify-content: space-between;
         padding: 0 var(--gap-xl);
-
-        
-
-
     }
 
     &__arrow {
-        display: block;
-        // min-height: 40px; // temp
-        // max-width: 250px; //temp
-        // width: 100%; //temp
-        color: var(--color-light);
-    }
+        display: flex;
 
+    }
+    
     &__arrow-text {
-        font-family: var(--font-serif);
-        font-weight: 400;
-        font-size: var(--font-size-1);
+        margin: 0 0 0 12px;
+        color: var(--color-light);
         transition: all 0.5s;
+        
+        &:hover {
+            color: var(--color-accent);
+        }
+
         
     }
 
@@ -72,6 +71,10 @@
             &:hover {
                 background-color: var(--color-accent-900);
             }
+        }
+
+        @include responsive.max(800px) {
+            padding: 0.5rem 1rem;
         }
     }
 }

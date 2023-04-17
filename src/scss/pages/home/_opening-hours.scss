@@ -1,17 +1,19 @@
 @use '../../components/buttons' as button;
 @use '../../components/details';
+@use '../../utilities/responsive';
 
 .opening-hours {
+    display: grid;
+    grid-template-columns: var(--grid-container);
     
     &__inner {
-        margin: 4rem;
-        display: grid;
-        
+        margin: 2rem;   
+        grid-column: inner;     
     }
 
     // Header
     &__header {
-        width: 100%;
+        // width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -23,10 +25,6 @@
         flex-wrap: wrap;
         align-items: center;
     }
-    
-    &__title {
-        
-    }
 
     &__week {
         padding-top: 5px;
@@ -37,8 +35,15 @@
     
     &__button-red {
         @include button.default;
-        font-size: var(--font-size-3);   
+        font-size: var(--font-size-3);  
+        
+        @include responsive.max(800px) {
+            padding: 0.5rem 1rem;
+            font-size: var(--font-size-2);
+        }
+
     }
+
 
     // Main
 
@@ -46,35 +51,36 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: var(--gap-s);
-        
-    }
 
-    &__card {
-        padding: 0 2rem;
+        @include responsive.max(850px) {
+            display: block;
+            margin: 0 5rem;
+        }  
+
+        @include responsive.max(650px) {
+           margin: 0;
+        }
     }
 
     &__card-title {
-        padding-left: 1rem;
+        padding-left: 3rem;
 
+        
     }
     
     &__list {
         list-style: none;
-        padding-left: 1rem;
-        max-width: 100%;
-        width: 100%;
-        padding: 0;
-        
+        padding: 1rem;        
     }
     
-    &__list-item {
+    &__item {
         display: flex;
         justify-content: space-between;     
         line-height: 2;
+        padding: 0 1rem;
     }
 
     span {
-        // background-color: var(--color-dark-300);
         font-weight: 600;
     }
 
@@ -85,37 +91,42 @@
           
         color: var(--color-light);
 
-        .opening-hours__list {
-            :nth-child(odd) {
+        .opening-hours__list-reception {
+            padding: 0 1rem;
+        }
+
+        .opening-hours__item {
+            &:nth-child(odd) {
                 background-color: var(--color-dark-200);
             }
         }
 
-        .opening-hours__list-item--current {
+        .opening-hours__item--current {
             color: var(--color-accent);
         }
 
         .opening-hours__card-title-reception {
             color: var(--color-light);
+            padding-left: 2rem;
         }
 
         p {
             color: var(--color-light-500);
             font-size: 10px;
-            
+            padding-left: 2rem;
         }
     }
 
     &__card-bastu,
     &__card-keycard {
         color: var(--color-dark);
-
-        .opening-hours__list-item--current {
+    
+        .opening-hours__item--current {
             color: var(--color-accent-800);
         }
 
-        .opening-hours__list {
-            :nth-child(odd) {
+        .opening-hours__item {
+            &:nth-child(odd) {
                 background-color: var(--color-dark-700);
             }
         }
